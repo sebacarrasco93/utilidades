@@ -8,12 +8,12 @@ use SebaCarrasco93\Utilidades\Tests\TestCase;
 class StringsTest extends TestCase
 {
     /** @test: Extraer a un Helper */
-    function devuelve_tildes_en_mayusculas() {
-        $nombre = 'á é í ó ú';
+    function devuelve_tildes_y_enyes_en_mayusculas() {
+        $nombre = 'á é í ó ú ñ';
 
         $formato = Utilidades::nombre($nombre);
 
-        $this->assertEquals('Á É Í Ó Ú', $formato);
+        $this->assertEquals('Á É Í Ó Ú Ñ', $formato);
     }
 
     /** @test */
