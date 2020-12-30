@@ -26,7 +26,7 @@ return Utilidades::peso_chileno(1500); // $1.500
 
 Capitaliza la primera letra de cada palabra (dejando primero todo en minúsculas)
 ```php
-return Utilidades::nombre('sEbAstián'); // Sebastián
+return Utilidades::nombre('sEbAstiÁn'); // Sebastián
 ```
 
 También sanitiza espacios sobrantes

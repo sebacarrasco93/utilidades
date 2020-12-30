@@ -45,7 +45,6 @@ class StringsTest extends TestCase
 
     /** @test */
     function los_tildes_se_dejan_en_minúscula_también() {
-        $this->markTestSkipped('Falta ver cómo implementar');
         $nombre = 'NicolÁs';
 
         $formato = Utilidades::nombre($nombre);

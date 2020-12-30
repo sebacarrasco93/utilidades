@@ -11,7 +11,7 @@ trait Strings
         $array = array_values($array);
 
         foreach ($array as $nombre) {
-            $limpio[] = ucfirst(strtolower($nombre));
+            $limpio[] = ucfirst(mb_strtolower($nombre));
         }
 
         return implode(' ', $limpio);
