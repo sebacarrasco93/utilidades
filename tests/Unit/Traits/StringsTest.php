@@ -7,6 +7,15 @@ use SebaCarrasco93\Utilidades\Tests\TestCase;
 
 class StringsTest extends TestCase
 {
+    /** @test: Extraer a un Helper */
+    function devuelve_tildes_en_mayusculas() {
+        $nombre = 'á é í ó ú';
+
+        $formato = Utilidades::nombre($nombre);
+
+        $this->assertEquals('Á É Í Ó Ú', $formato);
+    }
+
     /** @test */
     function devuelve_un_nombre_de_manera_correcta() {
         $nombre = 'sEbAstiáN';
@@ -23,6 +32,15 @@ class StringsTest extends TestCase
         $formato = Utilidades::nombre($nombre);
 
         $this->assertEquals('Sebastián Nicolás Carrasco Poblete', $formato);
+    }
+
+    /** @test */
+    public function devuelve_el_primer_nombre() {
+        $nombre = 'sEbAstiáN   Carrasco       pobLetE';
+
+        $formato = Utilidades::p_nombre($nombre);
+
+        $this->assertEquals('Sebastián', $formato);
     }
 
     /** @test */
