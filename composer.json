@@ -15,7 +15,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "SebaCarrasco93\\Utilidades\\Tests\\": "src/tests"
+            "SebaCarrasco93\\Utilidades\\Tests\\": "tests/"
         }
     },
     "require-dev": {
