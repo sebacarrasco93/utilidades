@@ -1,0 +1,34 @@
+{
+    "name": "sebacarrasco93/utilidades",
+    "description": "Utilidades para Laravel",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Seba Carrasco Poblete",
+            "email": "sebacarrasco93@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "SebaCarrasco93\\Utilidades\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SebaCarrasco93\\Utilidades\\Tests\\": "src/tests"
+        }
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.7"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SebaCarrasco93\\Utilidades\\UtilidadesServiceProvider"
+            ],
+            "aliases": {
+                "Utilidades": "SebaCarrasco93\\Utilidades\\Facades\\Utilidades"
+            }
+        }
+    }
+}
