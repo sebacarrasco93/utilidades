@@ -2,6 +2,8 @@
 
 namespace SebaCarrasco93\Utilidades\Traits;
 
+use SebaCarrasco93\Utilidades\Repositories\Rut;
+
 trait Strings
 {
     function mb_ucfirst($string, $encoding = 'UTF-8')
@@ -36,15 +38,8 @@ trait Strings
 
     public function rut(string $string)
     {
-        $filtrado = preg_replace('/[^0-9kK]/', '', $string);
-
-        $total_digitos = mb_strlen($filtrado);
-
-        $digitosRut = mb_substr($filtrado, $total_digitos * -1, -1);
-        $digitoVerificador = mb_strtoupper(mb_substr($filtrado, -1));
-
-        if ($total_digitos == 8 || $total_digitos == 9) {
-            return $digitosRut .  '-' . $digitoVerificador;
-        }
+        $claseRut = new Rut($string);
+        
+        return $claseRut->salida;
     }
 }
