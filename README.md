@@ -34,6 +34,18 @@ También sanitiza espacios sobrantes
 return Utilidades::nombre('sEbAstián  cArrAscO  pOblEte'); // Sebastián Carrasco Poblete
 ```
 
+#### Primer nombre
+
+Toma un nombre completo, y devuelve el primero (después de limpiarlo)
+```php
+return Utilidades::p_nombre('sEbAstiÁn'); // Sebastián
+```
+
+También sanitiza espacios sobrantes
+```php
+return Utilidades::nombre('sEbAstián  cArrAscO  pOblEte'); // Sebastián Carrasco Poblete
+```
+
 #### RUT
 
 Devuelve el RUT sólo si es válido
