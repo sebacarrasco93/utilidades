@@ -14,11 +14,21 @@ trait Strings
         return mb_strtoupper($firstChar, $encoding) . $then;
     }
 
-    public function nombre(string $string)
+    public function espacios(string $string, $devolverComoArray = false)
     {
         $array = array_filter(explode(' ', $string));
-
         $array = array_values($array);
+
+        if ($devolverComoArray) {
+            return $array;
+        }
+
+        return implode(' ', $array);
+    }
+
+    public function nombre(string $string)
+    {
+        $array = $this->espacios($string, true);
 
         foreach ($array as $nombre) {
             $limpio[] = $this->mb_ucfirst(mb_strtolower($nombre));
@@ -29,9 +39,7 @@ trait Strings
 
     public function p_nombre(string $string)
     {
-        $array = array_filter(explode(' ', $string));
-
-        $array = array_values($array);
+        $array = $this->espacios($string, true);
 
         return $this->nombre($array[0]);
     }

@@ -13,6 +13,7 @@ return Utilidades::{nombre_método}({parámetro(s)});
 ## Métodos disponibles:
 
 ### Integers
+
 #### Peso chileno
 
 Agrega el símbolo $, y puntos correspondientes
@@ -22,6 +23,18 @@ return Utilidades::peso_chileno(1500); // $1.500
 ```
 
 ### Strings
+
+#### Espacios
+Limpia todos los espacios de string
+```php
+return Utilidades::espacios('este  es   un  texto'); // este es un texto
+```
+
+También puede devolver como array
+```php
+return Utilidades::espacios('este  es   un  texto', true); // ['este', 'es', 'un', 'texto']
+```
+
 #### Nombre
 
 Capitaliza la primera letra de cada palabra (dejando primero todo en minúsculas)
@@ -29,7 +42,7 @@ Capitaliza la primera letra de cada palabra (dejando primero todo en minúsculas
 return Utilidades::nombre('sEbAstiÁn'); // Sebastián
 ```
 
-También sanitiza espacios sobrantes
+También aplica "espacios"
 ```php
 return Utilidades::nombre('sEbAstián  cArrAscO  pOblEte'); // Sebastián Carrasco Poblete
 ```

@@ -18,6 +18,29 @@ class StringsTest extends TestCase
     }
 
     /** @test */
+    function espacios_borra_los_espacios_sobrantes() {
+        $texto = 'este  es  un  texto    mal  separado';
+
+        $formato = Utilidades::espacios($texto);
+
+        $this->assertEquals('este es un texto mal separado', $formato);
+    }
+
+    /** @test */
+    function espacios_borra_los_espacios_sobrantes_y_devuelve_cada_palabra_como_array() {
+        $texto = 'este  es  un  texto    mal  separado';
+
+        $formato = Utilidades::espacios($texto, true);
+
+        $this->assertEquals('este', $formato[0]);
+        $this->assertEquals('es', $formato[1]);
+        $this->assertEquals('un', $formato[2]);
+        $this->assertEquals('texto', $formato[3]);
+        $this->assertEquals('mal', $formato[4]);
+        $this->assertEquals('separado', $formato[5]);
+    }
+
+    /** @test */
     function devuelve_un_nombre_de_manera_correcta() {
         $nombre = 'sEbAstiáN';
 
