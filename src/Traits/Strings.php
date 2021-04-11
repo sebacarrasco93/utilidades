@@ -50,4 +50,13 @@ trait Strings
         
         return $claseRut->salida;
     }
+
+    public function titulo(string $string, string $nombre = null)
+    {
+        if ($nombre) {
+            return $string . ' | ' . $nombre;
+        }
+
+        return $string;
+    }
 }

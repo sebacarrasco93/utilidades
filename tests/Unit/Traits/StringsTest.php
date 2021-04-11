@@ -84,4 +84,22 @@ class StringsTest extends TestCase
 
         $this->assertEquals('18376588-4', $formato);
     }
+
+    /** @test */
+    function puede_generar_un_titulo_completo_sin_el_nombre_del_producto() {
+        $titulo = 'Este es el título';
+
+        $formato = Utilidades::titulo($titulo);
+
+        $this->assertEquals('Este es el título', $formato);
+    }
+
+    /** @test */
+    function puede_generar_un_titulo_completo_con_el_nombre_del_producto() {
+        $titulo = 'Este es el título';
+
+        $formato = Utilidades::titulo($titulo, 'Nombre del producto');
+
+        $this->assertEquals('Este es el título | Nombre del producto', $formato);
+    }
 }

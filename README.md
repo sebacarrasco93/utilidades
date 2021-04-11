@@ -69,3 +69,11 @@ return Utilidades::rut('18.376.588-4'); // 18376588-4
 return Utilidades::rut('5717465-k'); // 5717465-K
 return Utilidades::rut('5.717.465-K'); // 5717465-K
 ```
+
+#### Título
+
+Devuelve el título completo
+```php
+return Utilidades::titulo('Este es el título', 'Nombre del producto'); // Este es el título | Nombre del producto
+return Utilidades::titulo('Este es el título'); // Este es el título
+```
