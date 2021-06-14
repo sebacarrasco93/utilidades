@@ -77,3 +77,36 @@ Devuelve el título completo
 return Utilidades::titulo('Este es el título', 'Nombre del producto'); // Este es el título | Nombre del producto
 return Utilidades::titulo('Este es el título'); // Este es el título
 ```
+
+### Links
+
+#### Codificar URL
+
+Codifica un string a formato URL, similar a urlencode, pero cambiando el espacio por %20
+```php
+return Utilidades::codificar_url('Esta es mi casa'); // Esta%20es%20mi%20casa
+```
+
+#### Link Waze
+
+Convierte una dirección a la URL de API de Waze
+```php
+return Utilidades::link_waze('Esta es mi casa'); // https://waze.com/ul?q=Esta%20es%20mi%20casa
+```
+
+#### Link Maps
+
+Convierte una dirección a la URL de API de Maps
+```php
+return Utilidades::link_maps('Esta es mi casa'); // https://www.google.com/maps/search/?api=1&query=Esta%20es%20mi%20casa
+```
+
+#### Link WhatsApp
+
+Convierte un texto a la URL de API de WhatsApp
+```php
+return Utilidades::link_maps('Quiero consultar'); // https://wa.me/?text=Quiero%20consultar
+return Utilidades::link_maps('Quiero consultar', '+56900000000'); // https://wa.me/56900000000?text=Quiero%20consultar
+return Utilidades::link_maps(null, '+56900000000'); // https://wa.me/56900000000
+return Utilidades::link_maps(null, null); // null
+```
