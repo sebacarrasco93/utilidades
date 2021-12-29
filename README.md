@@ -2,7 +2,7 @@
 
 ## Instalación
 ```sh
-composer install sebacarrasco93/utilidades
+composer require sebacarrasco93/utilidades
 ```
 
 ## Uso
@@ -105,8 +105,8 @@ return Utilidades::link_maps('Esta es mi casa'); // https://www.google.com/maps/
 
 Convierte un texto a la URL de API de WhatsApp
 ```php
-return Utilidades::link_maps('Quiero consultar'); // https://wa.me/?text=Quiero%20consultar
-return Utilidades::link_maps('Quiero consultar', '+56900000000'); // https://wa.me/56900000000?text=Quiero%20consultar
-return Utilidades::link_maps(null, '+56900000000'); // https://wa.me/56900000000
-return Utilidades::link_maps(null, null); // null
+return Utilidades::whatsapp('Quiero consultar'); // https://wa.me/?text=Quiero%20consultar
+return Utilidades::whatsapp('Quiero consultar', '+56900000000'); // https://wa.me/56900000000?text=Quiero%20consultar
+return Utilidades::whatsapp(null, '+56900000000'); // https://wa.me/56900000000
+return Utilidades::whatsapp(null, null); // null
 ```
