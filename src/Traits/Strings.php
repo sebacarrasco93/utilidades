@@ -30,6 +30,8 @@ trait Strings
     {
         $array = $this->espacios($string, true);
 
+        $limpio = [];
+
         foreach ($array as $nombre) {
             $limpio[] = $this->mb_ucfirst(mb_strtolower($nombre));
         }

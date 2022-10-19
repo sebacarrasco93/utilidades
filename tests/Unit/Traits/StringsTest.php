@@ -77,6 +77,15 @@ class StringsTest extends TestCase
     }
 
     /** @test */
+    function si_el_nombre_esta_vacio_devuelve_vacio() {
+        $nombre = '';
+
+        $formato = Utilidades::nombre($nombre);
+
+        $this->assertEquals('', $formato);
+    }
+    
+    /** @test */
     public function el_rut_debe_aplicar_todos_los_filtros_de_salida_de_su_clase() {
         $rut = '18.376.588-4';
 
