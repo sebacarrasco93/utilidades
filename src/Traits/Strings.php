@@ -61,4 +61,9 @@ trait Strings
 
         return $string;
     }
+
+    public function sop(int $cantidad, string $singular, string $plural): string
+    {
+        return $cantidad === 1 ? $singular : $plural;
+    }
 }

@@ -111,4 +111,10 @@ class StringsTest extends TestCase
 
         $this->assertEquals('Este es el título | Nombre del producto', $formato);
     }
+
+    /** @test */
+    function sop_genera_singular_o_plural() {
+        $this->assertEquals('Producto', Utilidades::sop(1, 'Producto', 'Productos'));
+        $this->assertEquals('Productos', Utilidades::sop(2, 'Producto', 'Productos'));
+    }
 }

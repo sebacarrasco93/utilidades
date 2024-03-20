@@ -78,6 +78,15 @@ return Utilidades::titulo('Este es el título', 'Nombre del producto'); // Este 
 return Utilidades::titulo('Este es el título'); // Este es el título
 ```
 
+#### Singular o Plural (sop)
+
+Devuleve la palabra singular o plural (si se le entrega 1, singular)
+
+```php
+return Utilidades::sop(1, 'Producto', 'Productos'); // Producto
+return Utilidades::sop(2, 'Producto', 'Productos'); // Productos
+```
+
 ### Links
 
 #### Codificar URL
