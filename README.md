@@ -141,6 +141,17 @@ Route::get('test', function () {
 Sabe si está registrado el nombre de una ruta
 
 ```php
-Route::currentRouteNameHas('test.index'); // true | false
+Route::currentRouteNameHas('test.index'); // true o false
 ```
 
+### Vite
+
+Sólo disponible cuando existe el Facade Vite
+
+#### img
+
+Equivalente a escribir `Vite::asset("resources/img/seba.png")`
+
+```php
+Vite::img('resources/img/seba.png');
+```
