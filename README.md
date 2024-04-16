@@ -92,6 +92,7 @@ return Utilidades::sop(2, 'Producto', 'Productos'); // Productos
 #### Codificar URL
 
 Codifica un string a formato URL, similar a urlencode, pero cambiando el espacio por %20
+
 ```php
 return Utilidades::codificar_url('Esta es mi casa'); // Esta%20es%20mi%20casa
 ```
@@ -99,6 +100,7 @@ return Utilidades::codificar_url('Esta es mi casa'); // Esta%20es%20mi%20casa
 #### Link Waze
 
 Convierte una dirección a la URL de API de Waze
+
 ```php
 return Utilidades::link_waze('Esta es mi casa'); // https://waze.com/ul?q=Esta%20es%20mi%20casa
 ```
@@ -106,6 +108,7 @@ return Utilidades::link_waze('Esta es mi casa'); // https://waze.com/ul?q=Esta%2
 #### Link Maps
 
 Convierte una dirección a la URL de API de Maps
+
 ```php
 return Utilidades::link_maps('Esta es mi casa'); // https://www.google.com/maps/search/?api=1&query=Esta%20es%20mi%20casa
 ```
@@ -113,9 +116,31 @@ return Utilidades::link_maps('Esta es mi casa'); // https://www.google.com/maps/
 #### Link WhatsApp
 
 Convierte un texto a la URL de API de WhatsApp
+
 ```php
 return Utilidades::whatsapp('Quiero consultar'); // https://wa.me/?text=Quiero%20consultar
 return Utilidades::whatsapp('Quiero consultar', '+56900000000'); // https://wa.me/56900000000?text=Quiero%20consultar
 return Utilidades::whatsapp(null, '+56900000000'); // https://wa.me/56900000000
 return Utilidades::whatsapp(null, null); // null
 ```
+
+### Routes
+
+Considera el siguiente bloque como ejemplo general para los métodos disponibles más abajo
+
+```php
+// web.php
+
+Route::get('test', function () {
+    // Contenido...
+})->name('test.index');
+```
+
+#### currentRouteNameHas
+
+Sabe si está registrado el nombre de una ruta
+
+```php
+Route::currentRouteNameHas('test.index'); // true | false
+```
+
