@@ -9,12 +9,24 @@ class Macros
 {
     public static function register()
     {
+        self::registerRouteMacros();
+
+        if (class_exists(Vite::class)) {
+            self::registerViteMacros();
+        }
+    }
+
+    private static function registerRouteMacros()
+    {
         Route::macro('currentRouteNameHas', function (string $nombre_ruta) {
             return str_contains(Route::currentRouteName(), $nombre_ruta);
         });
+    }
 
-        Vite::macro('img', function (string $nombre_imagen) {
-            return Vite::asset("resources/img/{$nombre_imagen}");
+    private static function registerViteMacros()
+    {
+        Vite::macro('asset', function (string $path) {
+            return asset(Vite::asset($path));
         });
     }
 }
