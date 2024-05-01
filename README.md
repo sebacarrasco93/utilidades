@@ -1,5 +1,9 @@
 # Utilidades
 
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/sebacarrasco93/utilidades.svg?style=flat-square)](https://packagist.org/packages/sebacarrasco93/utilidades)
+[![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/sebacarrasco93/utilidades/tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/sebacarrasco93/utilidades/actions?query=workflow%3Atests+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/sebacarrasco93/utilidades.svg?style=flat-square)](https://packagist.org/packages/sebacarrasco93/utilidades)
+
 ## Instalación
 ```sh
 composer require sebacarrasco93/utilidades
