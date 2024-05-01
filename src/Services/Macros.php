@@ -25,8 +25,8 @@ class Macros
 
     private static function registerViteMacros()
     {
-        Vite::macro('asset', function (string $path) {
-            return asset(Vite::asset($path));
+        Vite::macro('img', function (string $nombre_imagen) {
+            return Vite::asset("resources/img/{$nombre_imagen}");
         });
     }
 }

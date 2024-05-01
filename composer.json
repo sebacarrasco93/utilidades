@@ -19,7 +19,8 @@
         }
     },
     "require-dev": {
-        "orchestra/testbench": "^6.7"
+        "orchestra/testbench": "^6.7",
+        "pestphp/pest": "^1.23"
     },
     "extra": {
         "laravel": {
@@ -29,6 +30,11 @@
             "aliases": {
                 "Utilidades": "SebaCarrasco93\\Utilidades\\Facades\\Utilidades"
             }
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
         }
     }
 }
